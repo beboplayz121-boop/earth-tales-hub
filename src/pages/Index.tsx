@@ -147,7 +147,7 @@ const Index = () => {
               </Button>
             </div>
             <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-white/80 text-sm animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary-glow" /> Licensed & Insured</div>
+              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary-glow" /> Licensed in Maryland & Delaware</div>
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary-glow" /> Free Estimates</div>
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary-glow" /> Residential & Commercial</div>
             </div>
@@ -380,7 +380,7 @@ const Index = () => {
           </div>
           <div className="pt-8 flex flex-col md:flex-row justify-between gap-4 text-sm opacity-60">
             <div>© {new Date().getFullYear()} 92 Ground Crew. All rights reserved.</div>
-            <div>Licensed & Insured · Maryland's Eastern Shore</div>
+            <div>Licensed in Maryland & Delaware · Insured</div>
           </div>
         </div>
       </footer>
