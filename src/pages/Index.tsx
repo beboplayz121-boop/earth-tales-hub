@@ -102,14 +102,29 @@ const Index = () => {
       {/* HERO */}
       <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Beautifully landscaped home with manicured lawn at golden hour"
-            className="w-full h-full object-cover animate-slow-zoom"
-            width={1920}
-            height={1280}
-          />
+          {heroSlides.map((s, i) => (
+            <img
+              key={i}
+              src={s.src}
+              alt={s.alt}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${i === slide ? 'opacity-100 animate-slow-zoom' : 'opacity-0'}`}
+              width={1920}
+              height={1280}
+              loading={i === 0 ? 'eager' : 'lazy'}
+            />
+          ))}
           <div className="absolute inset-0 bg-gradient-hero" />
+          {/* Slide indicators */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setSlide(i)}
+                aria-label={`Show slide ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-500 ${i === slide ? 'w-8 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/80'}`}
+              />
+            ))}
+          </div>
         </div>
         <div className="container relative z-10 py-20">
           <div className="max-w-3xl">
@@ -350,9 +365,7 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-background/10">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src={logo} alt="92 Ground Crew logo" className="h-12 w-auto object-contain" />
               <div>
                 <div className="font-display font-semibold text-lg">92 Ground Crew</div>
                 <div className="text-xs opacity-60">Premier Landscaping · Salisbury, MD</div>
