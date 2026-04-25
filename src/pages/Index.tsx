@@ -156,7 +156,7 @@ const Index = () => {
           </div>
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
-              <img src={mowingImg} alt="Professional landscaper mowing a striped lawn" loading="lazy" width={1024} height={1024} className="w-full h-full object-cover" />
+              <img src={workLawnAerial} alt="Aerial view of freshly mowed lawn with precision stripe pattern" loading="lazy" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-elegant max-w-xs hidden md:block">
               <div className="flex gap-1 mb-2">
