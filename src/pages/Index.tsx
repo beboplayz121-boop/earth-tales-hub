@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, Star, Leaf, Scissors, Mountain, Sprout, Trees, Droplets, ArrowRight, Check, Menu, Trash2 } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-transparent.png";
 import heroImage from "@/assets/hero-crepe-myrtle.jpg";
 import workMulchBed from "@/assets/work-mulch-bed.jpg";
 import workLawnAerial from "@/assets/work-lawn-aerial.jpg";
